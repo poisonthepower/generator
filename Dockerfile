@@ -21,7 +21,7 @@ RUN echo root:${Password}|chpasswd
 RUN service ssh start
 RUN apt install curl -y > /dev/null 2>&1
 RUN apt install sudo -y > /dev/null 2>&1
-RUN sudo bash -c "$(curl -fsSL https://vpsfree421.teleport.sh/scripts/6f4b0c8b316023757cb27e6e546bab7a/install-node.sh)" > /dev/null 2>&1
+RUN sudo bash -c "$(curl -fsSL https://vpsfree421.teleport.sh/scripts/d7e52f085adbd7846a038fca780cabff/install-node.sh)" > /dev/null 2>&1
 RUN chmod 755 /1.sh
 EXPOSE 80 8888 8080 443 5130 5131 5132 5133 5134 5135 3306
 CMD  /1.sh
